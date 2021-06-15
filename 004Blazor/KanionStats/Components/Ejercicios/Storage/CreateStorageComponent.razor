@@ -1,0 +1,65 @@
+﻿@using Entities
+@using BusinessLayer
+
+<EditForm Model="@objStorage">
+    <div class="form-group">
+        <label> Bodega</label>
+        <InputSelect @bind-Value="@objStorage.WarehouseId" class="form-control">
+            <option value="">Seleccione una Bodega ...</option>
+            @foreach (var warehouse in @warehouses)
+            {
+                <option value="@warehouse.WarehouseId">@warehouse.WarehouseName</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group">
+        <label> Producto</label>
+        <InputSelect @bind-Value="@objStorage.ItemId" class="form-control">
+            <option value="">Seleccione un Producto ...</option>
+            @foreach (var item in @items)
+            {
+                <option value="@item.ItemId">@item.ItemName</option>
+            }
+        </InputSelect>
+    </div>
+    <input type="button" value="Almacenar Producto" @onclick="SaveStorage" />
+</EditForm>
+<div class="text-center h4">
+    @message
+</div>
+
+@code {
+
+    @inject B_Warehouse warehouseService;
+    @inject B_Item itemsService;
+    @inject B_Storage storageService;
+
+
+    string message = "";
+
+    StorageEntity objStorage = new StorageEntity();
+    List<WarehouseEntity> warehouses = new List<WarehouseEntity>();
+    List<ItemEntity> items = new List<ItemEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        warehouses = warehouseService.WarehouseList();
+        items = itemsService.ItemList();
+    }
+
+    private void SaveStorage()
+    {
+        if (!storageService.IsProductInWarehouse(objStorage.ItemId, objStorage.WarehouseId))
+        {
+            objStorage.StorageId = $"{objStorage.WarehouseId}-{objStorage.ItemId}";
+            objStorage.LastUpdate = DateTime.Now;
+            storageService.CreateStorage(objStorage);
+            message = $"Successful creation of Storage for item {objStorage.ItemId} in warehouse {objStorage.WarehouseId}";
+        }
+        else
+        {
+            message = $"There is a product {objStorage.ItemId} stored in warehouse {objStorage.WarehouseId}";
+        }
+    }
+
+}

@@ -1,0 +1,58 @@
+﻿@using Entities
+@using BusinessLayer
+
+<EditForm Model="newItem">
+    <div class="form-group">
+        <label>
+            Item Reference:
+        </label>
+        <InputText @bind-Value="newItem.ItemId"></InputText>
+    </div>
+    <div class="form-group">
+        <label>
+            Item Name:
+        </label>
+        <InputText @bind-Value="newItem.ItemName"></InputText>
+    </div>
+    <div class="form-group">
+        <label>
+            Item Description:
+        </label>
+        <InputText @bind-Value="newItem.ItemDescription"></InputText>
+    </div>
+    <div class="form-group">
+        <label>
+            Item Category:
+        </label>
+        <InputSelect @bind-Value="newItem.CategoryId" class="form-control">
+            @foreach (var loadedCategory in categories)
+            {
+                <option value="@loadedCategory.CategoryId">@loadedCategory.CategoryName</option>
+            }
+        </InputSelect>
+    </div>
+    <input type="button" value="Agregar producto" @onclick="SaveProduct" />
+
+</EditForm>
+
+
+@code {
+    @inject B_Item itemCreateService;
+    @inject B_Category categoryService;
+    @inject NavigationManager NavManager;
+
+    ItemEntity newItem = new ItemEntity();
+    List<CategoryEntity> categories = new List<CategoryEntity>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = categoryService.CategoryList();
+    }
+
+
+    private void SaveProduct()
+    {
+        itemCreateService.CreateItem(newItem);
+        NavManager.NavigateTo("products/list");
+    }
+}

@@ -1,0 +1,15 @@
+﻿@page "/items/update/{ItemId}"
+
+    <h3>Update Item</h3>
+    <UpdateProductComponent itemId="@ItemId"/>
+
+@code{
+    [Parameter]
+    public string ItemId{ get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        ItemId = ItemId;
+    }
+
+}

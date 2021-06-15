@@ -1,0 +1,20 @@
+﻿@model Asignatura
+
+@{
+    ViewData["Title"] = "Asignatura!";
+    Layout = "_BaseTemplate";
+    var numberValue = 1; 
+}
+
+@* <div class="text-center">
+    <h1 class="display-4">Bienvenido a la escuela (Vista Normal) @numberValue</h1>
+    <p>Hoy es: @ViewBag.FechaHoy</p>
+    <h2>Clase: @Model.Nombre</h2>
+    <p><strong> Creditos: @Model.Creditos </strong></p>
+</div> *@
+
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a la escuela (Vista Parcial) @numberValue</h1>
+    <partial name="_SimpleCourse" model="@Model"></partial>
+</div>

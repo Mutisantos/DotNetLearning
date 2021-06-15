@@ -1,0 +1,23 @@
+﻿<h3>Test Form</h3>
+
+@code{
+    [Parameter]
+    public string paramMessage { get; set;}
+    public string message = "Mi contenido a";
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = paramMessage;
+    }
+
+    private void ChangeText()
+    {
+        message = "";
+    }
+}
+
+<input type="text" @bind-value="@message" />
+<input type="button" value="Limpia el valor de la casilla" @onclick="ChangeText" />
+<div>
+    @message
+</div>

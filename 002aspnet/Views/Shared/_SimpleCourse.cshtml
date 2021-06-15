@@ -1,0 +1,11 @@
+﻿@model Asignatura
+
+
+<div class="text-center">
+    <p><strong>Clase: @Model.Nombre</strong></p>
+    <p> Creditos: @Model.Creditos </p>
+    <p>Id: @Model.UUID</p>
+    <p>Descripcion: @Model.Descripcion</p>
+    <p>Jornada: @Model.Jornada.ToString()</p>
+    @* <p>Escuela: @Model.Escuela.ToString()</p> *@
+</div>

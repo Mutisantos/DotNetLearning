@@ -1,0 +1,16 @@
+﻿@model Escuela
+
+@{
+    ViewData["Title"] = "Escuela Lekh Vezé";
+    Layout = "_BaseTemplate";
+    var numberValue = 1; 
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a la escuela @numberValue</h1>
+    <h2>Nombre: @Model.Nombre</h2>
+    <p><strong>Fundación: @Model.AñoFundación </strong></p>
+    <p><i>@ViewBag.miCosaCustom</i></p>
+    <p><i>@ViewData["miCosaCustom"]</i></p>
+    @* <p>@Model.Asignaturas.Count</p> *@
+</div>

@@ -1,0 +1,62 @@
+﻿@using Entities
+@using BusinessLayer
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Reference</th>
+            <th>Item Name</th>
+            <th>Category</th>
+            <th>Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dbItem in itemList)
+        {
+        <tr>
+            <td>
+                @dbItem.ItemId
+            </td>
+            <td>
+                @dbItem.ItemName
+            </td>
+            <td>
+                @dbItem.Category.CategoryName
+            </td>
+            <td>
+                @dbItem.TotalQuantity
+            </td>
+            <td><a href="items/update/@dbItem.ItemId">Editar</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    @inject B_Item itemListService;
+    @inject B_Category categoryService;
+
+        List<ItemEntity> itemList = new List<ItemEntity>();
+
+
+    protected override 
+
+    protected override async Task OnInitializedAsync()
+    {
+        itemList = itemListService.ItemList();
+        foreach (var product in itemList)
+        {
+            if (product.CategoryId != null)
+            {
+                product.Category = categoryService.CategoryList().FirstOrDefault(x => x.CategoryId == product.CategoryId);
+            }
+            else
+            {
+                product.Category = new CategoryEntity();
+            }
+        }
+    }
+}

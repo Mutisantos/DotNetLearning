@@ -1,0 +1,13 @@
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.exe
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.deps.json
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.runtimeconfig.json
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.runtimeconfig.dev.json
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.dll
+C:\projects\Learning\001 C# and DOTNET\bin\Debug\netcoreapp3.1\001 C# and DOTNET.pdb
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.csprojAssemblyReference.cache
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.AssemblyInfoInputs.cache
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.AssemblyInfo.cs
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.csproj.CoreCompileInputs.cache
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.dll
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.pdb
+C:\projects\Learning\001 C# and DOTNET\obj\Debug\netcoreapp3.1\001 C# and DOTNET.genruntimeconfig.cache

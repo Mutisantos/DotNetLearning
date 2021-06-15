@@ -1,0 +1,13 @@
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.exe
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.deps.json
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.runtimeconfig.json
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.runtimeconfig.dev.json
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.dll
+C:\projects\Learning\001dotnet\c#fundamentals\bin\Debug\netcoreapp3.1\c#fundamentals.pdb
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.csprojAssemblyReference.cache
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.AssemblyInfoInputs.cache
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.AssemblyInfo.cs
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.csproj.CoreCompileInputs.cache
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.dll
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.pdb
+C:\projects\Learning\001dotnet\c#fundamentals\obj\Debug\netcoreapp3.1\c#fundamentals.genruntimeconfig.cache
